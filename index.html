@@ -3,83 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>!Morty</title>
-  <meta name="description" content="!Morty (@mortyiscute) – Discord & YouTube.">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="!Morty">
-  <meta property="og:description" content="@mortyiscute auf Discord & YouTube">
+  <title>Morty</title>
+  <meta name="description" content="mortyiscute">
+  <meta name="theme-color" content="#010101">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mortyiscute.github.io/">
+  <meta property="og:title" content="Morty">
+  <meta property="og:description" content="mortyiscute">
   <meta property="og:image" content="https://cdn.discordapp.com/avatars/1458119092450889901/3bede449d35a8818c34405a01698bc61.png?size=512">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="https://cdn.discordapp.com/avatars/1458119092450889901/3bede449d35a8818c34405a01698bc61.png?size=64">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg" aria-hidden="true"></div>
+  <main class="page">
+    <div class="avatar-wrap reveal">
+      <img id="avatar" class="avatar"
+           src="https://cdn.discordapp.com/avatars/1458119092450889901/3bede449d35a8818c34405a01698bc61.png?size=256"
+           alt="Avatar von Morty" width="128" height="128">
+      <span id="status-dot" class="status-dot" role="img" hidden></span>
+    </div>
 
-  <main class="wrap">
-    <!-- Profil -->
-    <section class="profile reveal">
-      <div class="avatar-wrap">
-        <img id="avatar" class="avatar"
-             src="https://cdn.discordapp.com/avatars/1458119092450889901/3bede449d35a8818c34405a01698bc61.png?size=256"
-             alt="Avatar von !Morty" width="112" height="112">
-        <span id="status-dot" class="status-dot" hidden></span>
-      </div>
+    <h1 class="name reveal">Morty</h1>
 
-      <h1 id="display-name" class="name">!Morty</h1>
+    <button id="username" class="username reveal" type="button" title="Benutzernamen kopieren">mortyiscute</button>
 
-      <button id="username" class="username" type="button" title="Benutzernamen kopieren">
-        <span id="username-text">@mortyiscute</span>
-        <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg>
-      </button>
-
-      <p id="custom-status" class="custom-status" hidden></p>
-
-      <p class="meta">
-        <span id="status-text" class="status-text" hidden></span>
-        <span id="meta-sep" class="sep" hidden aria-hidden="true">·</span>
-        <span id="member-since">Auf Discord seit Januar 2026</span>
-      </p>
-    </section>
-
-    <!-- Live-Aktivität (wird per Lanyard befüllt) -->
-    <section id="activity" class="card activity reveal" hidden aria-live="polite">
-      <div class="card-head"><span class="live-dot" aria-hidden="true"></span>Gerade</div>
-      <div id="activity-list"></div>
-    </section>
-
-    <!-- Links & Kontakt -->
-    <nav class="links reveal" aria-label="Links">
-      <a class="link" href="https://www.youtube.com/@mortyiscute" target="_blank" rel="noopener">
-        <span class="link-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </span>
-        <span class="link-text">
-          <span class="link-title">YouTube</span>
-          <span class="link-sub">@mortyiscute</span>
-        </span>
-        <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    <nav class="icons reveal" aria-label="Links">
+      <a class="icon" href="https://www.youtube.com/@mortyiscute" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       </a>
-
-      <a class="link link-primary" href="https://discord.com/users/1458119092450889901" target="_blank" rel="noopener">
-        <span class="link-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-        </span>
-        <span class="link-text">
-          <span class="link-title">Schreib mir auf Discord</span>
-          <span class="link-sub">@mortyiscute</span>
-        </span>
-        <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      <a class="icon" href="https://discord.com/users/1458119092450889901" target="_blank" rel="noopener" aria-label="Discord" title="Discord">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
       </a>
     </nav>
   </main>
-
-  <footer class="foot">!Morty · <span id="year">2026</span></footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
